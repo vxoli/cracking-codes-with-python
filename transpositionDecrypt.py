@@ -1,7 +1,7 @@
 # Transposition Cipher Decryption
 # https://www.nostarch.com/crackingcodes/ (BSD Licensed)
 
-import math
+import math, string, random
 
 def main():
 	myMessage = 'Cenoonommstmme oo snnio. s s c'
@@ -16,7 +16,7 @@ def decryptMessage(key, message):
 	numOfRows = key
 	numOfShadedBoxes = (numOfColumns*numOfRows)-len(message)
 
-	plaintext = ['']*numOfRows
+	plaintext = ['']*numOfColumns
 
 	column = row = 0
 
