@@ -21,7 +21,7 @@ def loadDictionary():
     dictionaryFile = open('OxfordEnglishDictionary.txt')
     englishWords = {}
     for word in dictionaryFile.read().split('\n'):
-        englishWords[word.strip(' ')[0].upper()] = None
+        englishWords[word.split(' ')[0].upper()] = None
     dictionaryFile.close()
     return englishWords
 ENGLISH_WORDS = loadDictionary()
