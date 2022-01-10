@@ -6,11 +6,9 @@ import affineCipher, detectEnglish, cryptomath
 SILENT_MODE = False
 
 def main():
-	myMessage = """5QG9ol3La6QI93!xQxaia6faQL9QdaQG1!!axQARLa!!A
-	uaRLQADQALQG93!xQxaGaAfaQ1QX3o1RQARL9Qda!AafARuQLX1LQALQI1
-	iQX3o1RN"Q-5!1RQP36ARu"""
+	myMessage = """5QG9ol3La6QI93!xQxaia6faQL9QdaQG1!!axQARLa!!AuaRLQADQALQG93!xQxaGaAfaQ1QX3o1RQARL9Qda!AafARuQLX1LQALQI1iQX3o1RN"Q-5!1RQP36ARu"""
 
-	hackedMessage = hackAffine(myMessage)
+	hackedMessage = hackAffine(myMessage.strip('\n\t'))
 
 	if hackedMessage != None:
 		print(hackedMessage)
