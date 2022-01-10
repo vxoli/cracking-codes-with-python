@@ -11,7 +11,7 @@ UPPERLETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 LETTERS_AND_SPACE = UPPERLETTERS + UPPERLETTERS.lower() + ' \t\n'
 
 def loadDictionary():
-    ## English words contains 47006 entries including alpha-numeric words
+    ## EnglishWords.txt contains 47006 entries including alpha-numeric words
     # dictionaryFile = open('EnglishWords.txt')
     # englishWords = {}
     # for word in dictionaryFile.read().split('\n'):
