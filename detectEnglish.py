@@ -11,10 +11,17 @@ UPPERLETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 LETTERS_AND_SPACE = UPPERLETTERS + UPPERLETTERS.lower() + ' \t\n'
 
 def loadDictionary():
-    dictionaryFile = open('EnglishWords.txt')
+    ## English words contains 47006 entries including alpha-numeric words
+    # dictionaryFile = open('EnglishWords.txt')
+    # englishWords = {}
+    # for word in dictionaryFile.read().split('\n'):
+    #     englishWords[word.upper()] = None
+    # dictionaryFile.close()
+    ## If using Oxford Dictionary - 31436 words - but also contains meanings and exaplantions that have to be stripped out:
+    dictionaryFile = open('OxfordEnglishDictionary.txt')
     englishWords = {}
     for word in dictionaryFile.read().split('\n'):
-        englishWords[word.upper()] = None
+        englishWords[word.strip(' ')[0].upper()] = None
     dictionaryFile.close()
     return englishWords
 ENGLISH_WORDS = loadDictionary()
