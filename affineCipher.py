@@ -10,7 +10,7 @@ def main():
      if it could deceive a human into believing that it was human."
      -Alan Turing"""
      
-     myKey = 2894
+     myKey = getRandomKey()
      myMode = 'encrypt' # Set to either 'encrypt' or 'decrypt'.
 
      if myMode == 'encrypt':
