@@ -31,10 +31,11 @@ def main():
     # split on \n\n not just \n as there is line between entries
     #each line will have word and dictioary entry with difinition/ usage/ history etc.
     #these are split off and blank entries dropped
-    fo = open('OxfordEnglishDictionary.txt')
-    wordList = fo.read().split('\n\n')
+    fo = open('dictionary.txt')
+    wordList = fo.read().split('\n')
     fo.close()
-    wordList = list([wordList[i].split(' ')[0].upper() for i in range(len(wordList)) if (wordList[i] != '')])
+#   Line for oxford EnglishDictionary.txt
+#   wordList = list([wordList[i].split(' ')[0].upper() for i in range(len(wordList)) if (wordList[i] != '')])
 
     for word in wordList:
         if word == '': continue
