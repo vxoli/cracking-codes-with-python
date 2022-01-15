@@ -3,10 +3,6 @@
 
 import re, copy, simpleSubCipher, wordPatterns, makeWordPatterns
 
-
-
-
-
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 nonLettersOrSpacePattern = re.compile('[^A-Z\s]')
 
