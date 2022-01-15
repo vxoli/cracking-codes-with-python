@@ -12,10 +12,10 @@ def getLetterCount(message):
            'O': 0, 'P': 0, 'Q': 0, 'R': 0, 'S': 0, 'T': 0, 'U': 0, 'V': 0,
            'W': 0, 'X': 0, 'Y': 0, 'Z': 0}
  
-for letter in message.upper():
-  if letter in LETTERS:
-    letterCount[letter] += 1
-    return letterCount
+  for letter in message.upper():
+    if letter in LETTERS:
+      letterCount[letter] += 1
+  return letterCount
 
 def getItemAtIndexZero(items):
   return items[0]
