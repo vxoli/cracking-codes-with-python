@@ -78,14 +78,15 @@ LOW_PRIMES = primeSieve(100)
 def isPrime(num):
     # Return True if num is a prime number. This function does a quicker
     # prime number check before calling rabinMiller().
+    LOW_PRIMES = primeSieve(100)
     if (num < 2):
         return False # 0, 1, and negative numbers are not prime.
     # See if any of the low prime numbers can divide num:
     for prime in LOW_PRIMES:
-        if (num % prime == 0):
-            return False
         if (num == prime):
             return True
+        if (num % prime == 0):
+            return False
     # If all else fails, call rabinMiller() to determine if num is a prime:
     return rabinMiller(num)
 
